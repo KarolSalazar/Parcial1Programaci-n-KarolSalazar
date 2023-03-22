@@ -1,43 +1,13 @@
 import math
-
-
+from Punto1 import Punto1 as p1
 """
 Aquí se supone que debemos poner lo que va interamente dentro del punto 2, y sólo definí la función :D
 """
 
 class impares:
-    def definir_n():
-        try:
-            n = int(input("Por favor ingrese el valor de n (debe ser impar): "))
-            if n<=0:
-                print("n debe ser mayor de 0")
-                return impares.definir_n()
-            elif n%2==0:
-                print("n debe ser impar")
-                return impares.definir_n()
-            else:
-                return n
-        except:
-            print("Debe ingresar un número")
-            return impares.definir_n()
         
-    def definir_intervalo(n):
-        try:
-            a = int(input("Por favor ingrese el valor de a (límite inferior): "))
-            b = int(input("Por favor ingrese el valor de b (límite superior): "))
-            if b<=a:
-                return impares.definir_intervalo()
-            else:
-                h = (b-a)/n
-                return h,a,b
-        except:
-            print("Debe ingresar un número")
-            return impares.definir_intervalo()
-        
-    def espacio_intervalo():
-        n = impares.definir_n()
-        h,a,b = impares.definir_intervalo(n)
-        lista_intervalos = []
+    def espacio_intervalo(n, h, a, b):
+        print("INICIO SOLUCIÓN PUNTO 2")
         x=[a]
 
         for i in range(1,n+1):
@@ -45,5 +15,19 @@ class impares:
 
         I=0
 
-        for i in range(1,(n-1)/2+1):
-            I+=math.sin(x[2*i])
+        for i in range(1,int((n-1)/2)+1):
+            I+=p1.funcion(x[2*i])
+
+        I*=2
+
+        for i in range(1,int((n+1)/2)+1):
+            I+=p1.funcion(x[2*i-1])
+        
+        I*=4
+
+        I+= p1.funcion(b)
+        I+= p1.funcion(a)
+        I*=(h/3)
+        print("La integral aproximada es: " + str(I))
+        print("FIN SOLUCIÓN PUNTO 2")
+

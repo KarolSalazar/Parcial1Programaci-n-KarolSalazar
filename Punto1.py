@@ -16,12 +16,13 @@ class Punto1:
         return x
     
     def ejecutar():
+        print("INICIO SOLUCIÓN PUNTO 1")
         x = Punto1.generar_random()
         print("Valor de X: " + str(x))
         f = Punto1.funcion(x)
         print("Valor obtenido en la función: " + str(f))
+        print("FIN SOLUCIÓN PUNTO 1")
 
-Punto1.ejecutar()
 
 
 """
