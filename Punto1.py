@@ -6,13 +6,13 @@ import random
 
 class Punto1:
     def funcion(x):
-        f = math.sin(x)/x
+        f = math.sin(x)
         return f
     
     def generar_random():
         x = random.randint(-999,999)
-        if x==0:
-            return Punto1.generar_random()
+        #if x==0:
+        #    return Punto1.generar_random()
         return x
     
     def ejecutar():
