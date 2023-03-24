@@ -1,5 +1,4 @@
 #f(x)=senx
-#       x
 
 import math
 import random

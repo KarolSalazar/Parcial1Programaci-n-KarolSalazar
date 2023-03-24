@@ -2,7 +2,7 @@ import math
 from Punto2 import impares
 from Punto1 import Punto1 as p1
 """
-Aquí se supone que debemos poner lo que va interamente dentro del punto 3, y sólo definí la función :D
+Aquí va el punto 3
 """
 
 class derivadas:
