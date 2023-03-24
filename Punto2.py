@@ -1,7 +1,7 @@
 import math
 from Punto1 import Punto1 as p1
 """
-Aquí se supone que debemos poner lo que va interamente dentro del punto 2, y sólo definir la función :D
+Aquí se resolvió el punto 2
 """
 
 class impares:
