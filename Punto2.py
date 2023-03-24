@@ -15,15 +15,21 @@ class impares:
 
         I=0
 
-        for i in range(1,int((n-1)/2)+1):
-            I+=p1.funcion(x[2*i])
+        suma1 = 0
+        suma2 = 0
 
-        I*=2
+        for i in range(1,int((n-1)/2)+1):
+            suma1+=p1.funcion(x[2*i])
+
+        suma1*=2
 
         for i in range(1,int((n+1)/2)+1):
-            I+=p1.funcion(x[2*i-1])
+            suma2+=p1.funcion(x[2*i-1])
         
-        I*=4
+        suma2*=4
+
+        I+= suma1
+        I+=suma2        
 
         I+= p1.funcion(b)
         I+= p1.funcion(a)
